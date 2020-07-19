@@ -1,7 +1,10 @@
 package com.rh.spring.a4springconfigurationwithjavaannotation.controller;
 
-import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Component;
 
-@Controller
+/*
+    SetterInjection
+ */
+@Component
 public class SetterInjection {
 }
