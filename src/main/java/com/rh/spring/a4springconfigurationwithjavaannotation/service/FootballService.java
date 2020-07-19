@@ -4,6 +4,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class FootballService implements Service{
+    @Override
     public String getName(){
         return "football";
     }

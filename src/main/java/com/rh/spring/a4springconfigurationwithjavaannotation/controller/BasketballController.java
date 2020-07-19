@@ -6,14 +6,14 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 /*
-    FieldInjection
+    Method Injection
  */
 @Component
 public class BasketballController implements Sport{
     private Service service;
 
     public BasketballController() {
-        System.out.println("Field Injection");
+        System.out.println("Method Injection");
     }
 
     @Autowired

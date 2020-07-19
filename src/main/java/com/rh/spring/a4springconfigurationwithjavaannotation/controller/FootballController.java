@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 /*
-    SetterInjection
+    Setter Injection
  */
 @Component
 public class FootballController implements Sport{
