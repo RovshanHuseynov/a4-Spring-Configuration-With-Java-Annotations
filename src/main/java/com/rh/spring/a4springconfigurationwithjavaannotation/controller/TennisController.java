@@ -1,6 +1,8 @@
 package com.rh.spring.a4springconfigurationwithjavaannotation.controller;
 
-import com.rh.spring.a4springconfigurationwithjavaannotation.service.TennisService;
+import com.rh.spring.a4springconfigurationwithjavaannotation.service.Service;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 /*
@@ -8,14 +10,15 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class TennisController implements Sport{
-    private TennisService tennisService;
+    private Service service;
 
-    public TennisController(TennisService tennisService) {
-        this.tennisService = tennisService;
+    @Autowired
+    public TennisController(@Qualifier("tennisService") Service service) {
+        this.service = service;
     }
 
     @Override
     public String letsPlay() {
-        return tennisService.getName();
+        return "letsPlay " + service.getName();
     }
 }

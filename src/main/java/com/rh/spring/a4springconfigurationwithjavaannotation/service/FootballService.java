@@ -3,7 +3,7 @@ package com.rh.spring.a4springconfigurationwithjavaannotation.service;
 import org.springframework.stereotype.Component;
 
 @Component
-public class FootballService {
+public class FootballService implements Service{
     public String getName(){
         return "football";
     }
