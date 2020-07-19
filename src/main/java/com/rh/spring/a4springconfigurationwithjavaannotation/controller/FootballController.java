@@ -1,5 +1,6 @@
 package com.rh.spring.a4springconfigurationwithjavaannotation.controller;
 
+import com.rh.spring.a4springconfigurationwithjavaannotation.service.FootballService;
 import org.springframework.stereotype.Component;
 
 /*
@@ -7,8 +8,13 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class FootballController implements Sport{
+    private FootballService footballService;
+
+    public FootballController() {
+    }
+
     @Override
     public String letsPlay() {
-        return "Football";
+        return footballService.getName();
     }
 }

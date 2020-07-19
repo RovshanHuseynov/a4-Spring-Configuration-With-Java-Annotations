@@ -16,6 +16,6 @@ public class TennisController implements Sport{
 
     @Override
     public String letsPlay() {
-        return "Tennis";
+        return tennisService.getName();
     }
 }

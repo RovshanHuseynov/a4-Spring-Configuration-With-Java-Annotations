@@ -4,4 +4,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class TennisService {
+    public String getName(){
+        return "tennis";
+    }
 }
