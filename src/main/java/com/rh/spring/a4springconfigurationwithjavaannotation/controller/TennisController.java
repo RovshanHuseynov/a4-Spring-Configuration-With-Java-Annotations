@@ -14,6 +14,7 @@ public class TennisController implements Sport{
 
     @Autowired
     public TennisController(@Qualifier("tennisService") Service service) {
+        System.out.println("Construction Injection");
         this.service = service;
         System.out.println(letsPlay());
     }

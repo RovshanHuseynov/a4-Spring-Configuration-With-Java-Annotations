@@ -12,6 +12,10 @@ import org.springframework.stereotype.Component;
 public class BasketballController implements Sport{
     private Service service;
 
+    public BasketballController() {
+        System.out.println("Field Injection");
+    }
+
     @Autowired
     public void anyMethod(@Qualifier("basketballService") Service service){
         this.service = service;
