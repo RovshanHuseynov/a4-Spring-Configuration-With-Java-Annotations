@@ -17,7 +17,8 @@ public class BasketballController implements Sport{
     }
 
     @Autowired
-    public void anyMethod(@Qualifier("basketballService") Service service){
+    @Qualifier("basketballService")
+    public void anyMethod(Service service){
         this.service = service;
         System.out.println(letsPlay());
     }

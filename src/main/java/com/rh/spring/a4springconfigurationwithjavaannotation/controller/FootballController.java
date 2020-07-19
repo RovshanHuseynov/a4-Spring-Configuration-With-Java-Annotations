@@ -17,7 +17,8 @@ public class FootballController implements Sport{
     }
 
     @Autowired
-    public void setService(@Qualifier("footballService") Service service) {
+    @Qualifier("footballService")
+    public void setService(Service service) {
         this.service = service;
         System.out.println(letsPlay());
     }

@@ -12,6 +12,9 @@ import org.springframework.stereotype.Component;
 public class TennisController implements Sport{
     private final Service service;
 
+    // @Qualifier is a nice feature, but it is tricky when used with Constructors.
+    // You cannot write @Qualifier directly after @Autowired
+    // You can write it in parameter list of constructor
     @Autowired
     public TennisController(@Qualifier("tennisService") Service service) {
         System.out.println("Construction Injection");

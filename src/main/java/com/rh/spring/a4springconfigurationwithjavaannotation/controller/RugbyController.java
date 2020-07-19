@@ -1,7 +1,8 @@
 package com.rh.spring.a4springconfigurationwithjavaannotation.controller;
 
-import com.rh.spring.a4springconfigurationwithjavaannotation.service.RugbyService;
+import com.rh.spring.a4springconfigurationwithjavaannotation.service.Service;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 /*
@@ -10,7 +11,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class RugbyController implements Sport{
     @Autowired
-    private RugbyService rugbyService;
+    @Qualifier("rugbyService")
+    private Service service;
 
     public RugbyController() {
         System.out.println("Field Injection");
@@ -18,6 +20,6 @@ public class RugbyController implements Sport{
 
     @Override
     public String letsPlay() {
-        return "letsPlay " + rugbyService.getName();
+        return "letsPlay " + service.getName();
     }
 }
