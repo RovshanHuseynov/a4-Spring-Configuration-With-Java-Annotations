@@ -6,5 +6,9 @@ import org.springframework.stereotype.Component;
     FieldInjection
  */
 @Component
-public class FieldInjection {
+public class BasketballController implements Sport{
+    @Override
+    public String letsPlay() {
+        return "Basketball";
+    }
 }

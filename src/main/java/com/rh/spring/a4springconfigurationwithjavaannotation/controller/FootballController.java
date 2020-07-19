@@ -6,5 +6,9 @@ import org.springframework.stereotype.Component;
     SetterInjection
  */
 @Component
-public class SetterInjection {
+public class FootballController implements Sport{
+    @Override
+    public String letsPlay() {
+        return "Football";
+    }
 }
